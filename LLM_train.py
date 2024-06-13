@@ -149,9 +149,9 @@ class QloraTrainer:
         sample_num = 3
         context_window = 2048
         dataset_name = 'Stack_elec' # Stack_elec Googlemap_CT
-        train_data = pickle.load(open('/gpfs/radev/scratch/ying_rex/jz875/DyLink_Datasets/'+ dataset_name +'/LLM_train.pkl', 'rb'))
+        train_data = pickle.load(open(dataset_name +'/LLM_train.pkl', 'rb'))
 
-        entity_text_reader = pd.read_csv('/gpfs/radev/scratch/ying_rex/jz875/DyLink_Datasets/' + dataset_name + '/entity_text.csv', chunksize=1000)
+        entity_text_reader = pd.read_csv(dataset_name + '/entity_text.csv', chunksize=1000)
         E_id_2_text = {}
         for batch in tqdm(entity_text_reader):
             id_batch = batch['i'].tolist()
@@ -165,7 +165,7 @@ class QloraTrainer:
                 E_id_2_text[id_batch[i]] = text_batch[i]
         
 
-        relation_text_reader = pd.read_csv('/gpfs/radev/scratch/ying_rex/jz875/DyLink_Datasets/' + dataset_name + '/relation_text.csv', chunksize=1000)
+        relation_text_reader = pd.read_csv(dataset_name + '/relation_text.csv', chunksize=1000)
         R_id_2_text = {}
         for batch in tqdm(relation_text_reader):
             id_batch = batch['i'].tolist()
