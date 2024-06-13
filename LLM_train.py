@@ -50,7 +50,7 @@ class QloraTrainer:
             bnb_8bit_compute_dtype=torch.bfloat16
             )
             print('load llama 3')
-            access_token = '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'
+            access_token = 'your_token'
             tokenizer = AutoTokenizer.from_pretrained(model_id, token=access_token)
             tokenizer.model_max_length = 512
             tokenizer.pad_token = tokenizer.eos_token
@@ -62,7 +62,7 @@ class QloraTrainer:
             bnb_8bit_quant_type="nf8",
             bnb_8bit_compute_dtype=torch.bfloat16
             )
-            access_token = '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'
+            access_token = 'your_token'
             tokenizer = AutoTokenizer.from_pretrained(model_id, token=access_token)
             model = AutoModelForCausalLM.from_pretrained(model_id, quantization_config=bnb_config, device_map={"":0}, token=access_token)
             if not tokenizer.pad_token:
