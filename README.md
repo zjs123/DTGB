@@ -27,3 +27,6 @@ Each graph is preserved through three files.
 
 ## Contact
 For any questions or suggestions, you can use the issues section or contact us at (zjss12358@gmail.com).
+
+## Acknowledge
+Codes and model implementations are largely referred to [DyGLib](https://github.com/yule-BUAA/DyGLib) project. Thanks for their great contributions!
