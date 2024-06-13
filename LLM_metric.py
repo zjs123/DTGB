@@ -24,7 +24,7 @@ def get_bert_score(candidate, reference):
 dataset_name = "Stack_ubuntu"
 
 #["llama3", "vicuna7b","vicuna13b","mistral"]:
-test_data = pickle.load(open('/gpfs/radev/scratch/ying_rex/jz875/DyLink_Datasets/'+ dataset_name +'/s_his_o_des_his_result_llama.pkl', 'rb'))
+test_data = pickle.load(open(dataset_name +'/s_his_o_des_his_result_llama.pkl', 'rb'))
 result = {}
 result["bleu"] = []
 result["rouge_p"] = []
