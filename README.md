@@ -25,5 +25,5 @@ Each graph is preserved through three files.
 
 ### Textual Relation Generation Task
 
-### Contact
+## Contact
 For any questions or suggestions, you can use the issues section or contact us at (zjss12358@gmail.com).
