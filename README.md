@@ -18,6 +18,17 @@ Each graph is preserved through three files.
 ## Reproduce the Results
 
 ### Future Link Prediction Task
+* Example of training *DyGFormer* on *GDELT* dataset without text attributes:
+```{bash}
+python train_link_prediction.py --dataset_name GDELT --model_name DyGFormer --patch_size 2 --max_input_sequence_length 64 --num_runs 5 --gpu 0 --use_feature no
+```
+
+* Example of training *DyGFormer* on *GDELT* dataset with text attributes:
+```{bash}
+python train_link_prediction.py --dataset_name GDELT --model_name DyGFormer --patch_size 2 --max_input_sequence_length 64 --num_runs 5 --gpu 0 --use_feature Bert
+```
+* The __AP__ and __AUC-ROC__ metrics on the test set (both transductive setting and inductive setting) will be automatically saved in `saved_resuts/DyGFormer/GDELT/DyGFormer_seed0no.json`
+* The best checkpoint will be saved in `saved_resuts/DyGFormer/GDELT/` folder, and the checkpoint will be used to reproduce the performance on the node retrieval task.
 
 ### Destination Node Retrieval Task
 
