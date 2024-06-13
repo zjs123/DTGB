@@ -104,7 +104,7 @@ def test_s_his_o_des_his(): # 1, 3, 5, 10
             print([len(results), len(test_data)])
         except:
             continue
-    pickle.dump(results, open('/gpfs/radev/scratch/ying_rex/jz875/DyLink_Datasets/'+ dataset_name +'/s_his_o_des_his_result_vicuna13b.pkl', 'wb'))
+    pickle.dump(results, open(dataset_name +'/s_his_o_des_his_result_vicuna13b.pkl', 'wb'))
 
     
 def get_llm_response(prompt):
@@ -183,8 +183,8 @@ if __name__ == "__main__":
     
     # init dataset
     dataset_name = 'Stack_ubuntu' # Stack_elec Googlemap_CT
-    test_data = pickle.load(open('/gpfs/radev/project/ying_rex/jz875/DyLink_Datasets/'+ dataset_name +'/LLM_test.pkl', 'rb'))
-    entity_text_reader = pd.read_csv('/gpfs/radev/scratch/ying_rex/jz875/DyLink_Datasets/' + dataset_name + '/entity_text.csv', chunksize=1000)
+    test_data = pickle.load(open(dataset_name +'/LLM_test.pkl', 'rb'))
+    entity_text_reader = pd.read_csv(dataset_name + '/entity_text.csv', chunksize=1000)
     E_id_2_text = {}
     for batch in tqdm(entity_text_reader):
         id_batch = batch['i'].tolist()
@@ -198,7 +198,7 @@ if __name__ == "__main__":
             E_id_2_text[id_batch[i]] = text_batch[i]
     
 
-    relation_text_reader = pd.read_csv('/gpfs/radev/scratch/ying_rex/jz875/DyLink_Datasets/' + dataset_name + '/relation_text.csv', chunksize=1000)
+    relation_text_reader = pd.read_csv(dataset_name + '/relation_text.csv', chunksize=1000)
     R_id_2_text = {}
     for batch in tqdm(relation_text_reader):
         id_batch = batch['i'].tolist()
