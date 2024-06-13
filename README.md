@@ -10,7 +10,20 @@ Each graph is preserved through three files.
 * __entity_text.csv:__ stores the mapping from entity ids (e.g., `u` and `v`) to the text descriptions of entities.
 * __relation_text.csv:__ stores the mapping from relation ids (e.g., `r`) to the text descriptions of relations.
 
-### Using
+### Usage
 * After downloading the datasets, they should be uncompressed into the `DyLink_Datasets` folder.
 * Run `get_pretrained_embeddings.py` to obtain the Bert-based node and edge text embeddings. They will be saved as `e_feat.npy` and `r_feat.npy` respectively.
 * Run `get_LLM_data.ipynb` to get the train and test set for the textual relation generation task. They will be saved as `LLM_train.pkl` and `LLM_test.pkl` respectively.
+
+## Reproduce the Results
+
+### Future Link Prediction Task
+
+### Destination Node Retrieval Task
+
+### Edge Classification Task
+
+### Textual Relation Generation Task
+
+### Contact
+For any questions or suggestions, you can use the issues section or contact us at (zjss12358@gmail.com).
