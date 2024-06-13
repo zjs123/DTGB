@@ -17,7 +17,7 @@ if __name__ == "__main__":
     PLM = AutoModel.from_pretrained(pretrained_model_name).cuda()
     print("PLM initialized")
 
-    # [ 'Amazon_movies', 'Enron', 'GDELT', 'Googlemap_CT', 'ICEWS1819', 'Stack_elec', 'Stack_english', 'Stack_ubuntu', 'Yelp', 'Cite_HepTH']
+    # [ 'Amazon_movies', 'Enron', 'GDELT', 'Googlemap_CT', 'ICEWS1819', 'Stack_elec', 'Stack_english', 'Stack_ubuntu', 'Yelp']
     for data_set_name in ['GDELT']:
         print(data_set_name)
         edge_list = pd.read_csv(data_set_name + '/edge_list.csv')
