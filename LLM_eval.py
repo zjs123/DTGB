@@ -184,27 +184,6 @@ if __name__ == "__main__":
     # init dataset
     dataset_name = 'Stack_ubuntu' # Stack_elec Googlemap_CT
     test_data = pickle.load(open('/gpfs/radev/project/ying_rex/jz875/DyLink_Datasets/'+ dataset_name +'/LLM_test.pkl', 'rb'))
-    '''
-    E_id_2_text = {}
-    with open('/gpfs/radev/scratch/ying_rex/jz875/DyLink_Datasets/' + dataset_name + '/entity2id.txt', 'r') as input_file:
-        for line in tqdm(input_file.readlines()):
-            parts = line.rsplit('\t', 1)
-            if len(parts) == 2:
-                text, number = parts
-            number = number.strip()
-            if number.isdigit():
-                E_id_2_text[int(number)] = text.strip()
-    R_id_2_text = {}
-    with open('/gpfs/radev/scratch/ying_rex/jz875/DyLink_Datasets/' + dataset_name + '/relation2id.txt', 'r') as input_file:
-        for line in tqdm(input_file.readlines()):
-            parts = line.rsplit('\t', 1)
-            if len(parts) == 2:
-                text, number = parts
-            number = number.strip()
-            if number.isdigit():
-                R_id_2_text[int(number)] = text.strip()
-    '''
-    
     entity_text_reader = pd.read_csv('/gpfs/radev/scratch/ying_rex/jz875/DyLink_Datasets/' + dataset_name + '/entity_text.csv', chunksize=1000)
     E_id_2_text = {}
     for batch in tqdm(entity_text_reader):
