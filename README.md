@@ -2,6 +2,8 @@
 
 ## Dataset
 All eight dynamic text-attributed graphs provided by DTGB can be downloaded from [here](https://drive.google.com/drive/folders/1QFxHIjusLOFma30gF59_hcB19Ix3QZtk?usp=sharing).
+<img width="1230" alt="image" src="https://github.com/zjs123/DTGB/assets/17922610/2f714dd7-7928-4eed-8e55-8e1fa947e463">
+
 ### Format
 Each graph is preserved through three files.
 * __edge_list.csv:__ stores each edge in DyTAG as a tuple. i.e., `(u, v, r, t, l)`. `u` is the id of the source entity, `v` is the id of the target entity, `r` is the id of the relation between them, `t` is the occurring timestamp of this edge, `l` is the label of this edge.
