@@ -67,9 +67,18 @@ and then reproduce the performance of the fine-tunned LLMs by running
 python LLM_eval.py -config_path=LLM_configs/vicuna_7b_qlora_uncensored.yaml -model=lora
 ```
 
-
 ## Contact
 For any questions or suggestions, you can use the issues section or contact us at (zjss12358@gmail.com).
 
 ## Acknowledge
 Codes and model implementations are referred to [DyGLib](https://github.com/yule-BUAA/DyGLib) project. Thanks for their great contributions!
+
+### Reference
+```
+@article{zhang2024dtgb,
+  title={DTGB: A Comprehensive Benchmark for Dynamic Text-Attributed Graphs},
+  author={Zhang, Jiasheng and Chen, Jialin and Yang, Menglin and Feng, Aosong and Liang, Shuang and Shao, Jie and Ying, Rex},
+  journal={arXiv preprint arXiv:2406.12072},
+  year={2024}
+}
+```
