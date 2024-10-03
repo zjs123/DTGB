@@ -1,4 +1,4 @@
-# [DTGB: A Comprehensive Benchmark for Dynamic Text-Attributed Graphs (Accepted by NeurIPS 2024 D&B Track)](https://arxiv.org/abs/2406.12072)
+# [DTGB: A Comprehensive Benchmark for Dynamic Text-Attributed Graphs (Accepted by NeurIPS 2024)](https://arxiv.org/abs/2406.12072)
 
 ## Dataset
 All eight dynamic text-attributed graphs provided by DTGB can be downloaded from [here](https://drive.google.com/drive/folders/1QFxHIjusLOFma30gF59_hcB19Ix3QZtk?usp=sharing).
