@@ -1,4 +1,4 @@
-For these two temporal knowledge graphs, the raw text of edge labels (edge categories) is the same as its edge text descriptions in the relation_text.csv file.
+For these two temporal knowledge graphs, the raw text of edge labels (edge categories) is the same as its edge text descriptions in the edge_text.csv file.
 Note that if you need, you can also construct more coarse-grained edge categories based on the first two positions of CAMEO-Code. 
 Specifically, the text description of each edge can be projected to a CAMEO-Code based on CAMEO-Event-Data-Codebook, 
 and the first two positions of CAMEO-Code indicate the coarse-grained descriptions of this relation.
